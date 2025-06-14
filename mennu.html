@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./mennu.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+<header class="main-header">
+  <div class="logo">
+    <a href="./index.html"><img src="./IMG_9586.png" alt="logo" class='smth'></a>
+  </div>
+
+
+  <div class="burger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+
+  <nav class="nav-links" id="navMenu">
+    <a href="./mennu.html"  data-lang="home" >Меню</a>
+    <a href="./menu.html" data-lang="q">Десерты</a>
+    <a href="./about.html" data-lang="w">О нас</a>
+    <a href="./contact.html" data-lang="e">Контакты</a>
+
+<!-- <div class="lang-buttons">
+  <button onclick="changeLanguage('KZ')">KZ</button>
+  <button onclick="changeLanguage('RU')">RU</button>
+    <button onclick="changeLanguage('EN')">ENG</button>
+</div> -->
+
+
+
+
+  </nav>
+</header>
+
+
+
+   <h2 class="o" data-lang="l">Общее меню</h2>
+  <div class="menu-container" id="menu"></div>
+
+<div class="full">
+    <div class="ba">
+  <h2 class="b">Боулы</h2>
+  <div class="menu" id="menu1"></div>
+</div>
+<div class="all">
+  <h2>Собери свой <span class="highlight">Боул</span></h2>
+<div id="menu2"></div>
+</div></div>
+
+
+
+
+
+<footer id="footer">
+  <div class="footer-container">
+    <div>
+      <h4 data-lang="w">О нас</h4>
+      <ul class="social-icons">
+        <li><a href="https://www.instagram.com/ozgeshe.taraz/"><img src="./icons8-instagram-logo-50.png" alt="Instagram"></a></li>
+        <li><a href="https://wa.me/+77000203366"><img src="./icons8-whatsapp-logo-50.png" alt="WhatsApp"></a></li>
+        <li><a href="https://www.tiktok.com/@ozgeshe.taraz"><img src="./icons8-tiktok-50.png" alt="TikTok"></a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Иследовать</h4>
+      <ul>
+        <li><a href="./mennu.html" data-lang="home">Меню</a></li>
+        <li><a href="./menu.html" data-lang="q">Десерты</a></li>
+        <li><a href="./about.html" data-lang="w">О нас</a></li>
+        <li><a href="./contact.html" data-lang="e">Контакты</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 data-lang="e">Контакты</h4>
+      <ul>
+        <li><img src="./icons8-email-50.png" alt="Email"> <a href="mailto:ozgeshe.taraz@mail.ru">ozgeshe.taraz@mail.ru</a></li>
+        <li><img src="icons8-phone-50.png" alt="Phone"> <a href="tel:+77000203366">+7 700 020 3366</a></li>
+        <li><img src="icons8-location-50.png" alt="Location"> <a href="https://2gis.kz/almaty/geo/9430047407542739">Абая 109</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 data-lang="p">Открыто – Закрыто</h4>
+      <p style="color: #ffffff;">Каждый день: 08:00 - 23:00</p>
+    </div>
+  </div>
+</footer>
+  <script src="./mennu.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+ <link rel="stylesheet" href="./contact.css">
+    
+</head>
+<body>
+
+
+<header class="main-header">
+  <div class="logo">
+    <a href="./index.html"><img src="./IMG_9586.png" alt="logo" class='smth'></a>
+  </div>
+
+
+  <div class="burger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+
+  <nav class="nav-links" id="navMenu">
+    <a href="./mennu.html"  data-lang="home" >Меню</a>
+    <a href="./menu.html" data-lang="q">Десерты</a>
+    <a href="./about.html" data-lang="w">О нас</a>
+    <a href="./contact.html" data-lang="e">Контакты</a>
+
+<!-- <div class="lang-buttons">
+  <button onclick="changeLanguage('KZ')">KZ</button>
+  <button onclick="changeLanguage('RU')">RU</button>
+    <button onclick="changeLanguage('EN')">ENG</button>
+</div> -->
+
+
+
+
+  </nav>
+</header>
+
+    <div class="split-text-container">
+        <span class="text-part left" data-lang="z">Свяжитесь</span>
+       
+    </div>
+    <div class="container">
+        <div class="car">
+            <div class="contact-info">
+                <h2 data-lang="c">Оставайтесь с нами на связи!</h2>
+                <p data-lang="v">Адресс: Абая 109</p>
+                 <a href="tel:+77055150966" data-lang="m">Телефон: +7 700 020 3366</a>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/ozgeshe.taraz/">Instagram</a> | <a href="https://wa.me/+77000203366">WhatsApp</a>
+                </div>
+            </div>
+        
+    <div class="contact-form">
+        <form id="form">
+            <div class="form-group">
+                <input type="text" name="Name" placeholder="Name" required>
+                <input type="email" name="Email" placeholder="Email" required>
+            </div>
+            <input type="text" name="Phone" id="phone" placeholder="Phone" required>
+            <textarea name="Message" placeholder="Message" required></textarea>
+            <button class="but" type="submit" data-lang="b">Отправить</button>
+        </form>
+        <p id="success-message" class="hidden" data-lang="n">Форма успешно отправлена!</p>
+    </div>
+</div>
+    </div>
+
+    
+
+
+<footer id="footer">
+  <div class="footer-container">
+    <div>
+      <h4 data-lang="w">О нас</h4>
+      <ul class="social-icons">
+        <li><a href="https://www.instagram.com/ozgeshe.taraz/"><img src="./icons8-instagram-logo-50.png" alt="Instagram"></a></li>
+        <li><a href="https://wa.me/+77000203366"><img src="./icons8-whatsapp-logo-50.png" alt="WhatsApp"></a></li>
+        <li><a href="https://www.tiktok.com/@ozgeshe.taraz"><img src="./icons8-tiktok-50.png" alt="TikTok"></a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Иследовать</h4>
+      <ul>
+        <li><a href="./mennu.html" data-lang="home">Меню</a></li>
+        <li><a href="./menu.html" data-lang="q">Десерты</a></li>
+        <li><a href="./about.html" data-lang="w">О нас</a></li>
+        <li><a href="./contact.html" data-lang="e">Контакты</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 data-lang="e">Контакты</h4>
+      <ul>
+        <li><img src="./icons8-email-50.png" alt="Email"> <a href="mailto:ozgeshe.taraz@mail.ru">ozgeshe.taraz@mail.ru</a></li>
+        <li><img src="icons8-phone-50.png" alt="Phone"> <a href="tel:+77000203366">+7 700 020 3366</a></li>
+        <li><img src="icons8-location-50.png" alt="Location"> <a href="https://2gis.kz/almaty/geo/9430047407542739">Абая 109</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 data-lang="p">Открыто – Закрыто</h4>
+      <p style="color: #ffffff;">Каждый день: 08:00 - 23:00</p>
+    </div>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+<script src="./contact.js"></script>
+</body>
+</html>
