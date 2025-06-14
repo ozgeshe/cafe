@@ -1,0 +1,914 @@
+/* ========== Base Styles ========== */
+body {
+  font-family: 'Georgia', serif;
+}
+
+h4 {
+  color: #0d0d25;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+}
+
+/* ========== Titles ========== */
+.h2-title {
+  font-size: 46px;
+  line-height: 56px;
+  margin-bottom: 15px;
+  color: #4a5739;
+  position: relative;
+}
+
+/* ========== FAQ Section ========== */
+.faq-row {
+  column-count: 3;
+  margin: -100px -5px 0;
+}
+
+.faq-box {
+  border: 1px solid #bfbfbf;
+  border-radius: 30px;
+  background-image: linear-gradient(145deg, #e4e4e4, #ffffff);
+  break-inside: avoid;
+  margin: 0 5px 30px;
+  box-shadow: 10px 10px 30px rgba(207, 207, 208, 0.2),
+              -10px -10px 30px rgba(255, 255, 255, 0.9);
+}
+
+.faq-box .h4-title {
+  padding: 16px 30px;
+  border-bottom: 1px solid #bfbfbf;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.faq-box p {
+  padding: 8px 30px 20px;
+  margin: 0;
+}
+
+/* ========== Burger Menu ========== */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.burger span {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ========== Media Queries ========== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .info {
+    max-width: 100%;
+  }
+
+  .photo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .h2-title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .faq-row {
+    column-count: 1;
+    margin: 0;
+  }
+
+  .faq-box {
+    margin-bottom: 20px;
+  }
+
+  .faq-box .h4-title {
+    padding: 12px 20px;
+  }
+
+  .faq-box p {
+    padding: 10px 20px 16px;
+  }
+
+  #nu {
+    margin-left: 0;
+    padding: 0 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+    padding: 5px;
+    flex-direction: column;
+  }
+
+  .smth {
+    height: 50px;
+    width: auto;
+    margin-top: 5px;
+  }
+
+  section .flex {
+    flex-direction: column;
+  }
+
+  .text-4xl {
+    font-size: 26px;
+  }
+
+  .text-lg {
+    font-size: 16px;
+  }
+
+  .text-base {
+    font-size: 14px;
+  }
+
+  /* Burger nav */
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #4a5739;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+    padding: 20px 0;
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .nav-links {
+    width: 100%;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .bt,
+  button {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+
+  .smth {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-header {
+    padding: 10px;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 20px;
+    padding: 5px 0;
+  }
+
+  .container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .info h2 {
+    font-size: 22px;
+  }
+
+  .info h4 {
+    font-size: 16px;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+
+  .h2-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .faq-box .h4-title {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .faq-box p {
+    font-size: 14px;
+    padding: 8px 15px 12px;
+  }
+
+  button,
+  .bt {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .text-4xl {
+    font-size: 20px;
+  }
+
+  .text-lg {
+    font-size: 14px;
+  }
+
+  .text-base {
+    font-size: 13px;
+  }
+
+  ul.grid li {
+    font-size: 14px;
+  }
+
+  .smth {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .container1 {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
+      padding: 80px;
+
+      color: #333;
+      gap: 40px;
+      max-width: 1400px;
+      margin-top: 100px;
+  
+    }
+
+    .image {
+      flex: 1;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .content {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tag-header {
+      background-color: #66754c;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      width: 100px;
+    }
+
+    .content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .feature {
+      background-color: #66754c;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature::before {
+      content: "\2713";
+      font-weight: bold;
+    }
+@media (max-width: 360px) {
+  .container1 {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .image {
+    order: 1; 
+    width: 100%;
+    height: 220px; /* Экран кішкентай болған соң биіктігі де аз */
+  }
+
+  .image img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+
+  .content {
+    order: 2; 
+    margin-top: 16px;
+  }
+
+  .tag-header {
+    font-size: 10px;
+    padding: 8px 16px;
+    width: auto;
+  }
+
+  .content h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .features {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .feature {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 16px;
+    gap: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .container1 {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .image {
+    order: 1; /* Сурет бірінші шығады */
+    width: 100%;
+    height: 300px;
+    margin-top: -100px;
+  }
+
+  .image img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    border-radius: 16px;
+    
+  }
+
+ 
+  .smth {
+    width: 80px;
+    height: 50px;
+    margin-top: 8px;
+    font-size: 14px; /* қажет болса */
+  }
+  .content {
+    order: 2; /* Мәтін екінші болады */
+    margin-top: 20px;
+  
+  }
+  .tag-header{
+    margin-top: -30px;
+  }
+
+  .content h2 {
+    font-size: 28px;
+
+  }
+
+  .content p {
+    font-size: 16px;
+
+  }
+
+  .features {
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+
+
+
+   body {
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      gap: 150px;
+      flex-wrap: wrap;
+    }
+
+    .info {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .info h2 {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .info h4 {
+      margin: 0;
+      color: #777;
+      font-size: 20px;
+    }
+
+    .info p {
+      margin-top: 20px;
+      color: #444;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .photo img {
+      max-width: 400px;
+      height: auto;
+      object-fit: cover;
+      border: 5px solid #ccc;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 12px;
+    }
+
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .thumb {
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .thumb:hover {
+      transform: scale(1.1);
+    }
+
+    .thumb img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #bbb;
+    }
+
+    .thumb span {
+      display: block;
+      margin-top: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Анимациялар */
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    #main-name.animated,
+    #main-title.animated,
+    #main-desc.animated {
+      animation: slideUp 0.6s ease forwards;
+    }
+
+    #main-img.animated {
+      animation: slideRight 0.6s ease forwards;
+    }
+
+#nu{
+  margin-left: 80px;
+}
+
+
+/* Бастапқы стильдер сақталады */
+
+/* --- Мобильдік экран үшін (360px) --- */
+@media (max-width: 360px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .photo img {
+    max-width: 100%;
+    border: 3px solid #ccc;
+    box-shadow: none;
+    border-radius: 8px;
+  }
+
+  .info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .info h2 {
+    font-size: 24px;
+  }
+
+  .info h4 {
+    font-size: 16px;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+
+  .thumbnails {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Түбінде екі адам бір жолға шығады */
+  #thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #thumbs .thumb {
+    flex: 0 0 48%; /* Екі адам қатар */
+    margin-bottom: 10px;
+  }
+}
+
+/* --- Планшеттік экран үшін (768px) --- */
+@media (min-width: 361px) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .photo img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .info h2 {
+    font-size: 28px;
+  }
+
+  .info h4 {
+    font-size: 18px;
+  }
+
+  .info p {
+    font-size: 15px;
+  }
+
+  .thumbnails {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  #thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  #thumbs .thumb {
+    flex: 0 0 48%; /* екі адам бір қатарда */
+    margin-bottom: 15px;
+  }
+}
+
+/* Кіші экранда #nu класын центрлеу */
+@media (max-width: 768px) {
+  #nu {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+
+
+
+
+  .container1 {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
+      padding: 80px;
+
+      color: #333;
+      gap: 40px;
+      max-width: 1400px;
+      margin-top: 100px;
+  
+    }
+
+    .image {
+      flex: 1;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .content {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tag-header {
+      background-color: #66754c;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      width: 100px;
+    }
+
+    .content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .feature {
+      background-color: #66754c;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature::before {
+      content: "\2713";
+      font-weight: bold;
+    }
+@media (max-width: 360px) {
+  .container1 {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .image {
+    order: 1; /* Сурет бірінші */
+    width: 100%;
+    height: 220px; /* Экран кішкентай болған соң биіктігі де аз */
+  }
+
+  .image img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+
+  .content {
+    order: 2; /* Мәтін екінші */
+    margin-top: 16px;
+  }
+
+  .tag-header {
+    font-size: 10px;
+    padding: 8px 16px;
+    width: auto;
+  }
+
+  .content h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .features {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .feature {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 16px;
+    gap: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .container1 {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .image {
+    order: 1; /* Сурет бірінші шығады */
+    width: 100%;
+    height: 300px;
+    margin-top: -100px;
+  }
+
+  .image img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    border-radius: 16px;
+    
+  }
+
+  .content {
+    order: 2; /* Мәтін екінші болады */
+    margin-top: 20px;
+  
+  }
+  .tag-header{
+    margin-top: -30px;
+  }
+
+  .content h2 {
+    font-size: 28px;
+
+  }
+
+  .content p {
+    font-size: 16px;
+
+  }
+
+  .features {
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,225 @@
+body {
+    font-family:'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefcf1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px;
+    max-width: 1400px;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.split-text-container {
+    display: flex;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #8d9b6d;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 50px 0;
+    letter-spacing: 3px;
+    animation: fadeInDown 1.5s ease-out forwards;
+}
+.but{
+    margin-top: 10px;
+}
+.text-part {
+    display: inline-block;
+    position: relative;
+    transform: translateX(0);
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.text-part.left {
+    transform: translateX(-200%);
+    animation-name: slide-in-left;
+}
+
+.text-part.right {
+    transform: translateX(200%);
+    animation-name: slide-in-right;
+    
+}
+
+@keyframes slide-in-left {
+    0% { transform: translateX(-200%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-right {
+    0% { transform: translateX(200%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.contact-info, .contact-form {
+    flex: 1 1 45%;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.contact-info p, .info p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 10px 0;
+    color: black;
+}
+
+.social-media a {
+    text-decoration: none;
+    color:  #8d9b6d;;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    color: #A98467;
+}
+
+.contact-form {
+    background-color: #8d9b6d;
+    padding: 30px;
+    border-radius: 12px;
+    animation-delay: 0.8s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    transform: scale(1.03);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+    height: 100px;
+}
+.hidden { display: none; }
+
+/* button {
+    margin-top: 20px;
+    background-color: #FAEDCD;
+    color: black;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+button:hover {
+    background-color: #CCD5AE;
+}
+
+button:active {
+    transform: scale(0.95);
+} */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Car Section (Optional) */
+.car {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    background-color: #FAEDCD;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+    margin: 40px auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .split-text-container {
+        font-size: 2.5rem;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .car {
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    button {
+        width: 100%;
+    }
+    .text-part.right {
+    transform: translateX(200%);
+    animation-name: slide-in-right;
+    margin-top: 10px;
+    
+}
+}
